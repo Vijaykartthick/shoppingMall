@@ -1,6 +1,5 @@
 import sqlite3
 
-# Database connection
 conn = sqlite3.connect("mall.db")
 cursor = conn.cursor()
 
@@ -104,25 +103,19 @@ while True:
     print("3. Buy Product")
     print("4. Delete Product")
     print("5. Exit")
-
     choice = input("Enter your choice: ")
 
     if choice == "1":
         add_product()
-
     elif choice == "2":
         view_products()
-
     elif choice == "3":
         buy_product()
-
     elif choice == "4":
         delete_product()
-
     elif choice == "5":
         print("Thank you!")
         break
-
     else:
         print("Invalid choice!")
 conn.close()
